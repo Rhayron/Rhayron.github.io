@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Rhayron Nogueira · Ciência, código e presença</title>
+<meta name="description" content="O caderno vivo de Rhayron Nogueira: engenharia, visão computacional, pesquisa em ultrassom e agentes de IA. Explore os projetos com a Hina.">
+<meta name="theme-color" content="#f5f2e9">
+<meta property="og:title" content="Rhayron Nogueira · Ciência, código e presença">
+<meta property="og:description" content="Da pesquisa ao mundo real. Um portfólio de engenharia e IA, apresentado pela Hina.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rhayron.github.io/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://rhayron.github.io/assets/acoustic-tfm.jpg">
+<meta property="og:image:alt" content="Reconstrução ultrassônica TFM, do mestrado de Rhayron Nogueira">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<script src="assets/js/preferences.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap">
+
+<link rel="stylesheet" href="assets/css/notebook.css">
+<link rel="stylesheet" href="assets/css/portfolio.css?v=inspection-layout-1">
+<link rel="stylesheet" href="assets/css/avatar-loading.css?v=2">
+</head>
+<body>
+<a class="skip-link" href="#projetos">Pular para os projetos</a>
+
+<header class="rail">
+  <div class="in">
+    <a class="mark" href="#topo" aria-label="Rhayron, início"><svg class="brand-flower" viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M50 50C8 30 17 0 42 12C58 20 50 42 50 50C70 8 100 17 88 42C80 58 58 50 50 50C92 70 83 100 58 88C42 80 50 58 50 50C30 92 0 83 12 58C20 42 42 50 50 50Z" stroke="currentColor" stroke-width="3"/><circle cx="50" cy="50" r="5" fill="currentColor"/></svg>Rhayron<span style="color:var(--accent)">.</span></a>
+    <nav aria-label="Salas">
+      <a href="#onda" data-spy="onda">Onda</a>
+      <a href="#olho" data-spy="olho">Olho</a>
+      <a href="#oficio" data-spy="oficio">Ofício</a>
+      <a href="#presenca" data-spy="presenca">Presença</a>
+      <a href="#genstock" data-spy="genstock">GenStock</a>
+      <a href="#arquivo" data-spy="arquivo">Arquivo</a>
+      <a href="#sobre" data-spy="sobre">Sobre</a>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Alternar tema" title="Alternar tema">◐</button>
+  </div>
+  <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
+</header>
+<main id="conteudo">
+
+<section class="hero" id="topo" data-guide="intro" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="eyebrow">Rhayron Nogueira · um caderno vivo</p>
+      <h1 id="hero-title">Do sinal<br><em>à presença.</em></h1>
+      <p class="lede">Sou engenheiro eletricista e construo pontes entre <strong>ciência, código e o mundo real.</strong> Do ultrassom na GPU à visão na fábrica e às inteligências que fazem companhia.</p>
+      <div class="hero-actions">
+        <button class="action" type="button" data-open-guide>Deixa a Hina apresentar <span aria-hidden="true">✳</span></button>
+        <a class="action secondary" href="#projetos">Explorar os projetos <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="hero-footnote"><span>Curitiba, Brasil</span><span>Caterpillar · UTFPR</span><span>2021 a 2026</span></div>
+    </div>
+    <div class="hero-garden" aria-label="Hina, a anfitriã deste portfólio">
+      <div class="garden-shape" aria-hidden="true"></div><div class="garden-shape petal" aria-hidden="true"></div>
+      <svg class="garden-orbit" viewBox="0 0 450 520" fill="none" aria-hidden="true"><path d="M98 471C-30 385 16 50 214 36C432 21 483 276 373 452C327 525 191 493 147 402C79 260 280 200 395 344" stroke="currentColor" stroke-width="1.2"/><path d="M72 383C53 356 40 359 43 382C46 405 72 408 83 424M69 399C82 376 107 374 101 396C98 408 88 415 81 417" stroke="currentColor" stroke-width="1.5"/></svg>
+      <svg class="garden-flower" viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M50 50C8 30 17 0 42 12C58 20 50 42 50 50C70 8 100 17 88 42C80 58 58 50 50 50C92 70 83 100 58 88C42 80 50 58 50 50C30 92 0 83 12 58C20 42 42 50 50 50Z" stroke="currentColor" stroke-width="3"/><circle cx="50" cy="50" r="5" fill="currentColor"/></svg>
+      <span class="handnote">um pouco de vida<br>entre as linhas ↙</span>
+      <span class="garden-star" aria-hidden="true">✳</span>
+      <div class="hero-avatar" id="hero-avatar" data-avatar-state="loading" aria-busy="true"><span class="avatar-loader" role="status" aria-label="Carregando avatar"><span class="avatar-loader-ring" aria-hidden="true"></span></span></div>
+      <span class="sr-only" id="hero-backend" role="status"></span>
+      <div class="welcome-note"><span class="byline"><span class="status-dot"></span>Hina · sua anfitriã</span><p>“Olá, sou Hina. Este é o caderno de ideias do Rhayron. Vamos conhecer o que ele anda construindo.”</p></div>
+    </div>
+  </div>
+</section>
+<div class="intro-strip" aria-label="Áreas de atuação"><span>Pesquisa que investiga</span><i aria-hidden="true">✳</i><span>Engenharia que resolve</span><i aria-hidden="true">✳</i><span>IA que se faz presente</span></div>
+<section class="work-index wrap" id="projetos" aria-labelledby="index-title">
+  <div class="index-heading rv"><div><p class="eyebrow">Algumas sementes, muitos caminhos</p><h2 id="index-title">Cada ideia encontra<br><em>sua forma.</em></h2></div><p>Experimentos, sistemas em produção e projetos pessoais. Escolha um ponto de partida.</p></div>
+  <div class="selected-work">
+    <a class="work-link rv" href="#onda"><div class="art"><img src="assets/acoustic-tfm.jpg" alt="Reconstruções ultrassônicas do acoustic_gpu" width="1400" height="726" loading="lazy"></div><div class="index-meta"><span>01 / Pesquisa & GPU</span><span aria-hidden="true">↗</span></div><h3>Enxergar com som</h3><p>O interior de uma peça, reconstruído a partir de ondas. Física, deep learning e GPU.</p></a>
+    <a class="work-link rv" href="#oficio"><div class="art"><img src="assets/goals-hero.jpg" alt="Coado, planner de estudos no computador, celular e relógio" width="1600" height="880" loading="lazy"></div><div class="index-meta"><span>03 / Estudos & rotina</span><span aria-hidden="true">↗</span></div><h3>Um plano que cabe na vida</h3><p>Concursos, ciclos de estudo, revisões e pomodoro. Do computador ao relógio.</p></a>
+    <a class="work-link rv" href="#presenca"><div class="art"><img src="assets/live2d-montage.png" alt="Montagem com quatro avatares Live2D: Hiyori, Haru, Mao e Wanko" width="470" height="645" loading="lazy"></div><div class="index-meta"><span>04 / Project Hina</span><span aria-hidden="true">↗</span></div><h3>Código que faz companhia</h3><p>Voz, memória e personalidade. Sim, a nossa anfitriã também é um dos projetos.</p></a>
+  </div>
+  <nav class="all-rooms" aria-label="Explore todas as salas"><span>Ou caminhe por todas as salas:</span><a href="#onda">01 Onda</a><a href="#olho">02 Olho</a><a href="#oficio">03 Ofício</a><a href="#presenca">04 Presença</a><a href="#genstock">05 GenStock</a><a href="#arquivo">06 Arquivo</a></nav>
+</section>
+
+<!-- ===================== ONDA ===================== -->
+<section class="room onda" id="onda" data-guide="onda">
+  <div class="wrap">
+    <div class="room-head rv">
+      <h2 class="word">Onda</h2>
+      <div class="side">
+        <p class="eyebrow">Sala 1 · Pesquisa · CPGEI / UTFPR</p>
+        <p class="thesis">O mestrado: imagear o interior de uma peça com som, saber onde a sonda está, e fazer tudo isso rápido.</p>
+      </div>
+    </div>
+
+    <div class="signal-study rv">
+      <div class="signal-window"><canvas id="onda-cv" aria-label="Ilustração interativa de um phased array refratando na interface entre água e aço"></canvas></div>
+      <div class="signal-copy"><p class="eyebrow">Um pequeno experimento</p><h3>O som também desenha.</h3><p>Mova o ponteiro sobre as ondas. O foco acompanha o gesto e os atrasos dos 64 elementos se ajustam para que os pulsos se encontrem · uma ilustração do princípio por trás da pesquisa.</p><p class="mono">Água: 1480 m/s · Aço: 5900 m/s · Lei de Snell</p></div>
+    </div>
+
+    <div class="grid g32 rv">
+      <article class="proj">
+        <h3>acoustic_gpu</h3>
+        <div class="meta"><span>fev. 2026</span><span>Python</span><span>Taichi Lang</span><b>público</b></div>
+        <p>Em ensaio por imersão, o som sai do transdutor, atravessa a água e refrata ao entrar no aço. Para reconstruir uma imagem TFM é preciso o tempo de voo de cada um dos 64 elementos até cada pixel de uma região de 512 × 512: mais de 16 milhões de trajetórias refratadas, e cada uma é um problema de minimização. Na CPU isso é o gargalo. O módulo move o cálculo para kernels Taichi na GPU, mantém uma implementação de referência na CPU para validar, e cobre superfícies planas, inclinadas, tubulares e perfis irregulares estimados a partir dos próprios ecos.</p>
+        <dl class="spec">
+          <dt>Elementos</dt><dd>64</dd>
+          <dt>ROI</dt><dd>512 × 512 px</dd>
+          <dt>Trajetórias</dt><dd>&gt; 16 000 000 por imagem</dd>
+          <dt>Superfícies</dt><dd>plana · inclinada · tubular · irregular · estimada dos ecos</dd>
+          <dt>Validação</dt><dd>dataset FMC de Bristol</dd>
+          <dt>Saída</dt><dd>FMC sintético · reconstrução TFM · tabelas de TOF</dd>
+        </dl>
+        <div class="links"><a class="btn" href="https://github.com/Rhayron/acoustic_gpu" target="_blank" rel="noopener">github.com/Rhayron/acoustic_gpu</a></div>
+      </article>
+      <div class="grid" style="gap:1rem">
+        <figure class="frame" id="tour-acoustic"><img src="assets/acoustic-tfm.jpg" alt="Duas reconstruções TFM lado a lado: a referência de Bristol e a do pipeline acoustic_gpu" loading="lazy" width="1400" height="726"><figcaption>Reconstrução TFM do dataset de Bristol: referência à esquerda, acoustic_gpu à direita.</figcaption></figure>
+        <figure class="frame"><img src="assets/acoustic-scaling.jpg" alt="Gráficos de tempo de cálculo e acurácia de localização em função da resolução" loading="lazy" width="1200" height="364"><figcaption>Tempo de cálculo por resolução e acurácia de localização de defeito.</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="grid g23 rv" style="margin-top:clamp(3rem,7vw,6rem)">
+      <figure class="frame" id="tour-pose"><img src="assets/pose-deteccao.jpg" alt="Mão segurando a sonda de ultrassom com um marcador ChArUco preso, vista pela parede do tanque de água" loading="lazy" width="1400" height="787"><figcaption>O marcador ChArUco na sonda, dentro do tanque, visto pela parede de vidro.</figcaption></figure>
+      <article class="proj">
+        <h3>pose</h3>
+        <div class="meta"><span>jul. a out. 2026</span><span>Python</span><span>OpenCV</span><span>ChArUco</span><b>público</b></div>
+        <p>A segunda frente do mestrado: saber onde a sonda de ultrassom está. Uma câmera S600 em 3840 × 2160 fica no tripé, fora do tanque, e enxerga pela parede de vidro um marcador preso ao transdutor dentro da água. Dessa imagem sai a pose 6DoF da sonda, e com ela cada quadro de ultrassom ganha um lugar no espaço, para registro 3D em inspeção subaquática. A calibração intrínseca é do Caliscope e o vídeo vai para o disco cru: a matriz K viaja no JSON da sessão em vez de ser aplicada ao arquivo. O piloto acústico de outubro já rodou; o próximo passo é validar o caminho inteiro, vídeo, pose, ultrassom e comparação com controle.</p>
+        <dl class="spec">
+          <dt>Câmera</dt><dd>S600 · 3840 × 2160 · MJPEG · no ar, em tripé</dd>
+          <dt>Ultrassom</dt><dd>Multi2000 · arquivos .m2k</dd>
+          <dt>Calibração</dt><dd>Caliscope 0.11.3 · K selado por perfil</dd>
+        </dl>
+        <div class="links"><a class="btn" href="https://github.com/Rhayron/pose" target="_blank" rel="noopener">github.com/Rhayron/pose</a></div>
+      </article>
+    </div>
+
+    <div class="grid g2 rv" style="margin-top:clamp(3rem,7vw,6rem)">
+      <div class="caderno">
+        <div class="n"><b>Dissertação em andamento</b>Modelo híbrido de deep learning com o método SEAM para imageamento ultrassônico de phased array, avaliado por SSIM e Dice. Mestrado em Engenharia Elétrica e Informática Industrial, CPGEI/UTFPR, conceito CAPES 6, desde 2023.</div>
+        <div class="n"><b>Antes, 2021 a 2022 · P&amp;D para a Copel via UTFPR</b>Análise automática de imagens termográficas de equipamentos de subestações: extração de características, segmentação e classificação de anomalias. No mesmo período, o projeto de hardware de um veículo guiado automatizado.</div>
+      </div>
+      <figure class="frame"><img src="assets/acoustic-fmc.jpg" alt="Painéis de análise de dados FMC: B-scans, eco de pulso e espectro de frequência" loading="lazy" width="1400" height="867"><figcaption>Análise do FMC bruto e filtrado: B-scans, A-scan e espectro, do dataset de Bristol.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== OLHO ===================== -->
+<section class="room olho" id="olho" data-guide="olho">
+  <div class="wrap">
+    <div class="room-head rv">
+      <h2 class="word">Olho</h2>
+      <div class="side">
+        <p class="eyebrow">Sala 2 · Indústria · Caterpillar Brasil, 2023 até hoje</p>
+        <p class="thesis">Três anos de chão de fábrica: câmeras na linha de montagem, modelos YOLO em produção e um agente ao lado do operador.</p>
+      </div>
+    </div>
+
+    <div class="ficha rv" id="ficha">
+      <div class="stamp" aria-hidden="true">PASS</div>
+      <div class="head">
+        <h3 style="font-size:clamp(1.5rem,2.4vw,2.1rem);font-weight:600">ErrorProofing System</h3>
+        <span class="mono">Django · Flask · YOLO v5, v8 e v11 · RTSP · Oracle (MES) · Azure Blob · Azure DevOps</span>
+      </div>
+      <p style="max-width:44em">Sistema de inspeção visual da linha de montagem. Lê os feeds RTSP das câmeras industriais, roda os modelos em microsserviços e devolve pass/fail em tempo real para o operador via REST, cruzando o resultado com o torque das bancadas e os dados do MES. As imagens de inferência vão para o Azure Blob Storage com rastreabilidade por data e tipo. Cada versão de modelo ou serviço passa por Pytest e Coverage no Azure DevOps antes de ir para a linha.</p>
+
+      <div class="inspection-examples" id="inspection-examples">
+        <div class="inspection-heading"><div><p class="eyebrow">Da câmera à decisão</p><h4>O que o sistema precisa enxergar.</h4></div><p>Uma peça, uma regra de montagem e uma resposta para o operador.</p></div>
+        <div class="inspection-images">
+          <figure><img src="assets/errorproofing-camera.webp" alt="Imagem ilustrativa de uma câmera industrial observando uma peça metálica na bancada" loading="lazy" width="1536" height="1024"><figcaption><b>01 · Capturar</b><span>Câmera, iluminação e posicionamento mantêm a região de interesse visível.</span></figcaption></figure>
+          <figure><div class="inspection-visual" id="inspection-visual" data-overlay="true" data-scanning="false"><img src="assets/errorproofing-inspection.webp" alt="Exemplo ilustrativo de uma montagem com três parafusos e um ponto de fixação vazio" loading="lazy" width="1536" height="1024"><svg class="inspection-detections" viewBox="0 0 1536 1024" aria-hidden="true" focusable="false">
+  <polygon class="inspection-mask" points="588,307 701,307 701,285 815,285 815,307 911,307 944,349 960,365 960,502 926,539 603,539 570,502 570,364 587,350"/>
+  <g class="inspection-boxes"><rect class="inspection-box bolt-one" x="365" y="177" width="151" height="157" rx="12"/><rect class="inspection-box bolt-two" x="1005" y="177" width="153" height="157" rx="12"/><rect class="inspection-box bolt-three" x="365" y="623" width="151" height="157" rx="12"/><rect class="inspection-box connector-box" x="558" y="278" width="414" height="275" rx="14"/></g>
+  <g class="inspection-label"><rect x="558" y="226" width="202" height="48" rx="8"/><text x="579" y="261">conector</text></g>
+  <g class="inspection-missing"><rect x="1010" y="619" width="166" height="164" rx="12"/><circle cx="1093" cy="699" r="48"/><rect class="inspection-alert-label" x="860" y="565" width="316" height="48" rx="8"/><text x="878" y="600">fixação ausente</text></g>
+</svg><span class="inspection-scan" aria-hidden="true"></span></div><figcaption><b>02 · Inspecionar</b><span>A máscara delimita o conector; as caixas destacam as fixações e o ponto vazio.</span><button id="inspection-toggle" type="button" aria-pressed="true" aria-controls="inspection-visual">Ocultar simulação ↙</button></figcaption></figure>
+        </div>
+        <p class="visual-source">Imagens geradas por IA e marcação didática para explicar a aplicação. Não são capturas da fábrica nem resultados de inferência.</p>
+        <ol class="inspection-flow" aria-label="Fluxo de inspeção"><li><span>01</span><b>Quadro da câmera</b><small>feed RTSP</small></li><li><span>02</span><b>Inferência visual</b><small>modelo YOLO</small></li><li><span>03</span><b>Regra do processo</b><small>montagem · torque · MES</small></li><li><span>04</span><b>Resposta e registro</b><small>pass/fail · rastreabilidade</small></li></ol>
+      </div>
+      <ul>
+        <li><b>Sidekick agêntico</b><span>Agente LLM dentro das aplicações web da fábrica: responde dúvidas sobre os sistemas, orienta fluxos e executa tarefas, com contexto dinâmico via RAG.</span></li>
+        <li><b>Chatbot de inspeção</b><span>Perguntas em linguagem natural sobre processos e resultados, direto na interface de controle de qualidade.</span></li>
+        <li><b>OCR industrial</b><span>Leitura de documentos e etiquetas por API de OCR, alimentando a rastreabilidade sem digitação manual.</span></li>
+        <li><b>Bancadas e CLPs</b><span>Torquímetros, câmeras e controladores por Modbus TCP/IP, CANopen e MQTT. Dashboards em Power BI e Power Platform para Produção, Qualidade e Engenharia.</span></li>
+        <li><b>Frontend e dados</b><span>Aplicações completas em Angular e Django usadas por operadores e engenheiros; MySQL e Oracle no operacional, Snowflake nas análises maiores.</span></li>
+      </ul>
+    </div>
+
+    <div class="grid g23 rv" style="margin-top:clamp(3rem,7vw,6rem)">
+      <article class="proj">
+        <h3>Container Occupancy</h3>
+        <div class="meta"><span>jun. a ago. 2025</span><span>YOLOv10 segmentação</span><span>FastAPI</span><span>Angular</span><span>MySQL</span><b>privado</b></div>
+        <p>Quanto do contêiner já foi preenchido? Uma webcam olha para dentro, o modelo segmenta as caixas e o sistema calcula o percentual de ocupação em tempo real. O frontend em Angular mostra a leitura para a logística, e o histórico fica em MySQL.</p>
+        <p class="note">Arraste o cursor sobre a imagem para comparar o quadro cru com a segmentação.</p>
+      </article>
+      <div class="cmp" id="cmp" style="--cut:50%">
+        <img src="assets/container-frame.jpg" alt="Interior de um contêiner com caixas, quadro original da câmera" loading="lazy" width="1200" height="673">
+        <img class="top" src="assets/container-annotated.jpg" alt="O mesmo quadro com as caixas segmentadas pelo modelo em cores" loading="lazy" width="1200" height="673">
+        <div class="bar"></div><div class="knob">⇔</div>
+        <span class="tag l">YOLOv10</span><span class="tag r">câmera</span>
+        <input type="range" id="cmp-range" min="0" max="100" value="50" aria-label="Posição do comparador entre a imagem segmentada e a original">
+      </div>
+    </div>
+
+
+    <article class="splat-story rv" id="splat-project" data-guide="splat" aria-labelledby="splat-title">
+      <div class="splat-story-head">
+        <div><p class="eyebrow">Da visão 2D à reconstrução 3D</p><h3 id="splat-title">Splat SaaS</h3><p class="splat-deck">De muitas imagens,<br><em>um espaço para explorar.</em></p></div>
+        <div class="splat-summary"><div class="meta"><span>mai. 2026</span><span>Python · FastAPI</span><span>React · Three.js</span><b>privado</b></div><p>Fotos e vídeos deixam de ser apenas registros planos. O pipeline estima de onde cada imagem foi capturada e aprende uma representação da cena, que pode ser vista de novos ângulos.</p><p>O processamento pesado acontece na GPU do servidor. O resultado vai para um visualizador no navegador, onde a cena pode ser explorada.</p></div>
+      </div>
+      <div class="splat-workflow" id="splat-pipeline">
+        <div class="splat-section-label"><p class="eyebrow">O caminho da reconstrução</p><span>capturar → localizar → aprender → explorar</span></div>
+        <div class="splat-stages">
+          <figure><img src="assets/splat-capture.svg" alt="Esquema de várias câmeras observando o mesmo objeto de ângulos sobrepostos" width="360" height="230" loading="lazy"><figcaption><span class="stage-number">01</span><h4>Captura com sobreposição</h4><p>Vídeo ou fotos cobrem a cena de vários ângulos. O FFmpeg extrai os quadros que entram no processamento.</p><small>entrada · imagens</small></figcaption></figure>
+          <figure><img src="assets/splat-geometry.svg" alt="Esquema de correspondências entre imagens, posições das câmeras e uma nuvem esparsa de pontos" width="360" height="230" loading="lazy"><figcaption><span class="stage-number">02</span><h4>Encontrar a geometria</h4><p>O SfM, com pycolmap, relaciona pontos entre imagens para estimar as câmeras e uma estrutura inicial.</p><small>estrutura · posições</small></figcaption></figure>
+          <figure><img src="assets/splat-gaussians.svg" alt="Esquema de elipsoides coloridos que representam posição, escala e opacidade na cena" width="360" height="230" loading="lazy"><figcaption><span class="stage-number">03</span><h4>Aprender a aparência</h4><p>Splatfacto e gsplat ajustam gaussianas na GPU para aproximar as vistas de referência. O pipeline exporta PLY.</p><small>treino · CUDA</small></figcaption></figure>
+        </div>
+        <p class="visual-source">Esquemas didáticos do processo. Referências: <a href="https://colmap.github.io/tutorial.html" target="_blank" rel="noopener">COLMAP</a> e <a href="https://docs.nerf.studio/nerfology/methods/splat" target="_blank" rel="noopener">Nerfstudio / Splatfacto</a>.</p>
+      </div>
+      <div class="splat-explore-heading"><div><p class="eyebrow">04 · Explorar no navegador</p><h4>Uma cena, outros pontos de vista.</h4></div><p>Gire a borboleta ou escolha uma vista. A imagem muda com a posição da câmera, revelando a aparência da cena no espaço.</p></div>
+      <figure class="splat-demo"><div class="splat-view" id="splat-view" role="img" aria-label="Borboleta em 3D Gaussian Splatting. Arraste para girar, use os controles para pausar e restaurar a vista." tabindex="0"><p class="splat-loading" id="splat-status" role="status">Preparando a cena 3D…</p><span class="splat-label">3D Gaussian Splatting</span></div><div class="splat-toolbar"><span>Arraste para explorar</span><div class="splat-views" aria-label="Vistas da cena"><button type="button" data-splat-view="front" aria-pressed="true">Frente</button><button type="button" data-splat-view="angle" aria-pressed="false">Perspectiva</button><button type="button" data-splat-view="detail" aria-pressed="false">Detalhe</button></div><button id="splat-rotate" type="button" aria-pressed="false">Pausar rotação</button><button id="splat-reset" type="button">Restaurar vista</button></div><figcaption>Cena de referência · Borboleta. cena de demonstração pública do <a href="https://sparkjs.dev/" target="_blank" rel="noopener">Spark / World Labs</a>, usada aqui para explorar a técnica. O exemplo permite explorar a técnica; não foi produzido pelo Splat SaaS.</figcaption></figure>
+      <div class="splat-contact-sheet" id="splat-views-gallery" aria-label="Três vistas da cena de demonstração">
+        <figure><img src="assets/splat-front.webp" alt="Vista frontal da borboleta em Gaussian Splatting" loading="lazy" width="900" height="630"><figcaption>01 · Frente <span>forma e cor</span></figcaption></figure>
+        <figure><img src="assets/splat-angle.webp" alt="Vista em perspectiva da mesma cena 3D" loading="lazy" width="900" height="630"><figcaption>02 · Perspectiva <span>outra posição de câmera</span></figcaption></figure>
+        <figure><img src="assets/splat-detail.webp" alt="Vista aproximada da borboleta mostrando detalhes das asas" loading="lazy" width="900" height="630"><figcaption>03 · Detalhe <span>aproximação da cena</span></figcaption></figure>
+      </div>
+      <div class="splat-under-the-hood"><div><p class="eyebrow">O que sustenta o produto</p><h4>Da fila de processamento<br>à cena entregue.</h4></div><dl><div><dt>Pipeline rastreável</dt><dd>Etapas de preparação, quadros, SfM, treino e exportação acompanhadas por eventos SSE.</dd></div><div><dt>Prévia durante o treino</dt><dd>Um proxy na mesma origem integra o viewer Viser enquanto o modelo é construído.</dd></div><div><dt>Entrega e acesso</dt><dd>Visualização WebGL no frontend, autenticação em cookie httpOnly e planos Free e Pro com Stripe.</dd></div></dl></div>
+    </article>
+
+    <div class="grid g2 rv" style="margin-top:clamp(3rem,7vw,6rem)">
+      <div class="caderno">
+        <div class="n"><b>Antes da fábrica, os cadernos</b>YOLOv3 construído do zero em 2021 e um estudo de detecção e segmentação em 2022, ambos em notebooks. Estão na sala do Arquivo, no fim da página.</div>
+        <div class="n"><b>Protocolos e ferramentas da linha</b>RTSP · Modbus TCP/IP · CANopen · MQTT · OPC-UA · WebSocket · Redis · DeviceWise · Ladder e Texto Estruturado nos CLPs.</div>
+      </div>
+      <figure class="frame" style="max-width:360px"><img src="assets/yolo-dog.jpg" alt="Foto de um cachorro com a grade de células do YOLO e a caixa de detecção desenhadas por cima" loading="lazy" width="358" height="360"><figcaption>A grade do YOLO sobre a imagem, do caderno de 2022.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== OFÍCIO ===================== -->
+<section class="room" id="oficio" data-guide="oficio">
+  <div class="wrap">
+    <div class="room-head rv">
+      <h2 class="word">Ofício</h2>
+      <div class="side">
+        <p class="eyebrow">Sala 3 · Estudos e rotina · 2025 a 2026</p>
+        <p class="thesis">Um plano de estudos que acompanha o ritmo da vida, do computador ao pulso.</p>
+      </div>
+    </div>
+
+    <div class="cafe rv">
+      <div class="grid g32">
+        <article class="proj">
+          <h3>Coado</h3>
+          <div class="meta"><span>out. 2026</span><span>TypeScript · Kotlin</span><span>React 19 · Fastify 5 · Postgres 17</span><span>Android · Wear OS</span><b>público</b></div>
+          <p>Planner de estudos para concursos com tema de café e lofi. Planos por concurso, edital verticalizado, ciclo de estudos, pomodoro, revisões espaçadas em 1, 7, 30, 60 e 120 dias, estatísticas e simulados. O mesmo app roda no navegador, no celular Android (login nativo com Google, o site inteiro numa WebView e um pomodoro que vive em segundo plano) e no relógio Wear OS, onde o timer são carimbos de tempo e alarmes exatos, sem contar segundos.</p>
+          <p>Login com Google por authorization code com PKCE, isolamento por conta até nas chaves estrangeiras, sincronização em lote com retry e um cabeçalho próprio contra CSRF. Testado num TicWatch Pro 5 Enduro pareado a um Galaxy S23 Ultra.</p>
+          <div class="links"><a class="btn" href="https://github.com/Rhayron/goals" target="_blank" rel="noopener">github.com/Rhayron/goals</a></div>
+        </article>
+        <div class="pomo" id="pomo">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <circle cx="60" cy="60" r="52" fill="none" stroke="var(--line)" stroke-width="6"/>
+            <circle id="pomo-arc" cx="60" cy="60" r="52" fill="none" stroke="var(--cafe-accent)" stroke-width="6" stroke-linecap="round" transform="rotate(-90 60 60)" stroke-dasharray="326.7" stroke-dashoffset="0"/>
+          </svg>
+          <div>
+            <div class="t" id="pomo-t">25:00</div>
+            <div class="s">estudo · Direito Administrativo · rodada 1 de 4</div>
+            <div class="cup" aria-hidden="true"><span class="v"></span><span class="v"></span><span class="v"></span><span class="b"></span><span class="h"></span></div>
+          </div>
+        </div>
+      </div>
+      <figure id="tour-coado"><img src="assets/goals-hero.jpg" alt="O Coado no navegador, no celular e no relógio, lado a lado" loading="lazy" width="1600" height="880" style="border-radius:10px"><figcaption>Navegador, celular e relógio, sempre na mesma conta.</figcaption></figure>
+      <div class="grid g3" style="gap:1rem">
+        <figure><img src="assets/goals-watch.jpg" alt="Quatro telas do relógio: próxima sessão do ciclo, estudo, pausa e registro" loading="lazy" width="1400" height="426" style="border-radius:8px"><figcaption>No pulso: próxima do ciclo, estudo, pausa e registro.</figcaption></figure>
+        <figure><img src="assets/goals-phone.jpg" alt="Telas do pomodoro no celular: escolha, estudo, pausa e registro" loading="lazy" width="1400" height="735" style="border-radius:8px"><figcaption>No celular: a xícara enche conforme o café é coado.</figcaption></figure>
+        <figure><img src="assets/goals-noturno.jpg" alt="Tela inicial do Coado no tema noturno" loading="lazy" width="1400" height="1205" style="border-radius:8px"><figcaption>O tema noturno, “madrugada de lofi”.</figcaption></figure>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== PRESENÇA ===================== -->
+<section class="room pres" id="presenca" data-guide="presenca">
+  <div class="wrap">
+    <div class="room-head rv">
+      <h2 class="word">Presença</h2>
+      <div class="side">
+        <p class="eyebrow">Sala 4 · Project Hina · jun. 2026 em diante</p>
+        <p class="thesis">Uma companheira que mora no desktop, lembra do que você disse e muda de humor com o tempo.</p>
+      </div>
+    </div>
+
+    <div class="grid g23 rv">
+      <div class="avatar-collection" id="avatar-collection"><div class="collection-heading"><p class="eyebrow">Live2D · várias formas de ser</p><h3>Uma Hina.<br><em>Muitos jeitos.</em></h3></div><div class="avatar-montage" id="avatar-montage"><button class="avatar-tile avatar-tile-hiyori" type="button" data-avatar-choice="hiyori" aria-label="Usar Hiyori na apresentação" aria-pressed="false"><span class="montage-stage" id="montage-hiyori" data-model="hiyori"></span><span class="avatar-caption">Hiyori<span aria-hidden="true">↗</span></span><span class="sr-only" id="montage-status-hiyori"></span></button><button class="avatar-tile avatar-tile-haru" type="button" data-avatar-choice="haru" aria-label="Usar Haru na apresentação" aria-pressed="true"><span class="montage-stage" id="montage-haru" data-model="haru"></span><span class="avatar-caption">Haru<span aria-hidden="true">↗</span></span><span class="sr-only" id="montage-status-haru"></span></button><button class="avatar-tile avatar-tile-mao" type="button" data-avatar-choice="mao" aria-label="Usar Mao na apresentação" aria-pressed="false"><span class="montage-stage" id="montage-mao" data-model="mao"></span><span class="avatar-caption">Mao<span aria-hidden="true">↗</span></span><span class="sr-only" id="montage-status-mao"></span></button><button class="avatar-tile avatar-tile-wanko" type="button" data-avatar-choice="wanko" aria-label="Usar Wanko na apresentação" aria-pressed="false"><span class="montage-stage" id="montage-wanko" data-model="wanko"></span><span class="avatar-caption">Wanko<span aria-hidden="true">↗</span></span><span class="sr-only" id="montage-status-wanko"></span></button></div><p class="collection-note">Escolha a aparência da apresentadora. A voz e o jeito de apresentar continuam iguais. Modelos de amostra Live2D.</p></div>
+      <article class="proj">
+        <h3>Hina</h3>
+        <div class="meta"><span>Python 3.13 · FastAPI</span><span>Electron 43</span><span>Live2D · VRM · PNGTuber</span><span>929 commits</span><b>instaladores públicos</b></div>
+        <p>VTuber companion e desktop pet. A janela é Electron, com modo pet transparente e click-through: o clique atravessa o vazio e só pega no corpo do avatar. A conversa, a voz e a memória rodam num servidor Python local, por FastAPI e WebSocket. Ela ouve pelo microfone, responde em áudio, olha para o ponteiro e, com a câmera ligada, acompanha o seu rosto. Interface em português do Brasil e inglês.</p>
+        <p>Com o modo agente ligado, ela executa ferramentas via MCP: hora, busca e leitura de páginas, memória, lembretes, arquivos, shell, uso do computador e um quadro Kanban com workers em segundo plano. A política padrão é perguntar antes de escrever, apagar ou executar. Uma suíte de não-regressão protege memória, personas, latência e o motor procedural a cada mudança.</p>
+        <dl class="spec">
+          <dt>Avatares</dt><dd>Live2D (Cubism) · VRM · PNGTuber em canvas · MMD · Spine · 13 no catálogo, 5 no instalador</dd>
+          <dt>Ouvir</dt><dd>Deepgram Flux · Groq Whisper</dd>
+          <dt>Falar</dt><dd>ElevenLabs · Gemini · Cartesia · Piper · pocket-tts · clone local</dd>
+          <dt>Janela</dt><dd>pet, desktop 520 × 760, bandeja · dashboard em /dashboard · memória em /memory-browser</dd>
+        </dl>
+        <div class="links"><a class="btn" href="https://github.com/Project-H-I-N-A/hina-releases" target="_blank" rel="noopener">github.com/Project-H-I-N-A/hina-releases</a><span class="btn priv">código privado</span></div>
+      </article>
+    </div>
+
+    <figure class="frame dashboard-showcase rv"><img src="assets/hina-dashboard-plum.jpg" alt="Dashboard atual da Hina em ameixa claro, com avatar Haru, humor e capacidades" width="1400" height="1103" loading="lazy"><figcaption>Por dentro da Hina · dashboard em ameixa claro. Captura do aplicativo, com dados de demonstração.</figcaption></figure>
+
+    <div class="horiz rv" style="margin-top:clamp(3rem,7vw,6rem)">
+      <div class="hz">
+        <p class="eyebrow">Minutos · humor</p>
+        <h4>Um vetor PAD que decai</h4>
+        <p>Prazer, ativação e dominância reagem a cada turno, modulam a linguagem corporal do avatar e voltam sozinhos à linha de base da persona. Cutuque e veja.</p>
+        <div class="pad" id="pad">
+          <div class="row"><span>prazer</span><div class="bar"><i id="pad-p"></i></div><span class="val" id="pad-pv">0,60</span></div>
+          <div class="row"><span>ativação</span><div class="bar"><i id="pad-a"></i></div><span class="val" id="pad-av">0,40</span></div>
+          <div class="row"><span>dominância</span><div class="bar"><i id="pad-d"></i></div><span class="val" id="pad-dv">0,50</span></div>
+          <div class="btns"><button type="button" data-pad="0.25,0.15,0.05">elogiar</button><button type="button" data-pad="-0.3,0.35,-0.2">provocar</button><button type="button" data-pad="-0.1,-0.25,-0.1">ignorar</button><button type="button" data-pad="0.1,0.3,0.25">pedir ajuda</button></div>
+          <div class="mood" id="pad-mood">tranquila, na linha de base</div>
+        </div>
+      </div>
+      <div class="hz">
+        <p class="eyebrow">Semanas · genoma de estilo</p>
+        <h4>Dez dimensões, mutações de 0,03</h4>
+        <p>Formalidade, sarcasmo, calor, verbosidade e mais seis eixos sofrem micro-mutações a cada turno e são puxados por atratores da constituição da persona. A personalidade deriva, mas não se perde.</p>
+        <svg class="radar" id="radar" viewBox="0 0 200 200" role="img" aria-label="Radar de dez dimensões do genoma de estilo, mutando em torno dos atratores"></svg>
+        <figure class="frame"><img src="assets/hina-persona-plum.jpg" alt="Personalidade no dashboard da Hina em tema ameixa claro" loading="lazy" width="800" height="500"><figcaption>Dashboard em ameixa claro: personalidade e genoma da anfitriã.</figcaption></figure>
+      </div>
+      <div class="hz">
+        <p class="eyebrow">Meses · memória</p>
+        <h4>Grafo bi-temporal em SQLite</h4>
+        <p>Triplas sujeito-predicado-objeto com <code class="mono">valid_from</code> e <code class="mono">invalid_at</code>, confiança que sobe com confirmações e decai com o desuso. Busca vetorial com sqlite-vec, texto com FTS5 e recall híbrido por RRF. O navegador de memória tem um grafo 3D em Three.js para fixar, corrigir ou arquivar fatos.</p>
+      </div>
+    </div>
+
+    <div class="rv" style="margin-top:clamp(3rem,7vw,6rem)">
+      <p class="eyebrow" style="margin-bottom:1.2rem">A família em volta</p>
+      <div class="eco">
+        <div class="it">
+          <img class="round" src="assets/hinawatch-face.png" alt="Mostrador do relógio com a Hina em miniatura e a hora" loading="lazy" width="360" height="360">
+          <h4>HinaWatch</h4>
+          <p class="mono" style="color:var(--accent)">set. a out. 2026 · Kotlin · Wear OS · 58 commits</p>
+          <p>O mesmo modelo Live2D ativo no PC, desenhado na GPU do relógio com o Cubism SDK for Java em OpenGL ES 2. Só chegam eventos pelo WebSocket, nunca vídeo. Push-to-talk, HUD do modo pet e pedidos de permissão do agente respondidos no pulso. No TicWatch Pro 3 Ultra, o build sem depuração baixou o quadro do avatar de 17,5 para 9,4 ms.</p>
+        </div>
+        <div class="it">
+          <h4>HinaMobile</h4>
+          <p class="mono" style="color:var(--accent)">out. 2026 · Kotlin · Android · ML Kit</p>
+          <p>A câmera frontal acha o rosto no aparelho e manda ao relógio só a posição, até 15 vezes por segundo, pelo Data Layer do Wear OS. Sem mensagem por 1,5 s, o olhar volta ao de costume. Nenhuma imagem sai do celular.</p>
+        </div>
+        <div class="it">
+          <h4>hina2d</h4>
+          <p class="mono" style="color:var(--accent)">out. 2026 · Cubism · Git LFS</p>
+          <p>Produção da identidade Live2D própria: PSDs revisados, base editável no Cubism, auditorias e scripts de conferência. Uma pipeline anterior (psd2live, rembg) separou as camadas a partir da arte.</p>
+        </div>
+        <div class="it">
+          <img src="assets/landing-current.png" alt="Landing atual da Hina: Seu desktop. Com mais companhia." loading="lazy" width="1400" height="875">
+          <h4><a href="https://hina-companion.rhayron.chatgpt.site" target="_blank" rel="noopener">Site e documentação ↗</a></h4>
+          <p class="mono" style="color:var(--accent)">out. 2026 · HTML · CSS · JS · sem build</p>
+          <p>A landing atual apresenta a experiência, o dashboard e os avatares em movimento. A própria Hina conduz a visita, com voz e uma apresentação por contexto. Documentação em português e inglês.</p>
+        </div>
+        <div class="it">
+          <img src="assets/hina-welcome-wave.jpg" alt="Hina acenando, ilustração de boas-vindas do instalador" loading="lazy" width="640" height="712" style="max-width:200px">
+          <h4>hina-releases</h4>
+          <p class="mono" style="color:var(--accent)">out. 2026 · instaladores</p>
+          <p>Instaladores, guia de uso, licença (gratuita para uso pessoal) e política de privacidade em português e inglês. As issues são o canal de bugs.</p>
+        </div>
+        <div class="it">
+          <h4>Personas</h4>
+          <p class="mono" style="color:var(--accent)">YAML · atratores</p>
+          <p>Hina, Haru, Wanko, Mochi e outras: cada persona é uma constituição em YAML que define a linha de base do humor e os atratores do genoma. Trocar de avatar troca de persona.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GENSTOCK E FERRAMENTAS ===================== -->
+<section class="room oficio" id="genstock" data-guide="genstock">
+  <div class="wrap">
+    <div class="room-head rv"><h2 class="word">Estúdio</h2><div class="side"><p class="eyebrow">Sala 5 · GenStock e automação · 2025 a 2026</p><p class="thesis">Referências que viram imagens. Ideias que viram ferramentas para tirar trabalho do caminho.</p></div></div>
+    <div class="grid g23 rv" style="margin-top:0">
+      <figure class="frame" id="tour-genstock"><img src="assets/shot-genstock.jpg" alt="Página inicial do GenStock Studio com um painel de pesquisa visual e o botão Try free" loading="lazy" width="1400" height="875"><figcaption>GenStock Studio no ar, em adobe-pipeline.vercel.app.</figcaption></figure>
+      <article class="proj">
+        <h3>GenStock Studio</h3>
+        <div class="meta"><span>dez. 2025 a set. 2026</span><span>Python · FastAPI</span><span>React · Tailwind v4</span><span>93 commits</span><b>no ar</b></div>
+        <p>Pipeline para produzir imagens de banco de imagens. Coleta referências do Adobe Stock por um daemon local no navegador do operador (ou Unsplash, Pixabay, Pexels), analisa cada imagem com o Gemini e escreve prompts detalhados, gera novas imagens com Imagen 4 ou Nano Banana em paralelo com retry, remove duplicatas por hash perceptual, exporta o CSV de metadados no formato da Adobe e, se quiser, gera vídeo 4K com o Veo em dois trechos de 8 s unidos localmente. A galeria atualiza por SSE enquanto o lote roda.</p>
+        <div class="steps" aria-label="Etapas do pipeline"><span>fonte</span><i>→</i><span>scraping</span><i>→</i><span>análise · Gemini</span><i>→</i><span>geração</span><i>→</i><span>dedup</span><i>→</i><span>upscale</span><i>→</i><span>CSV</span><i>→</i><span>ZIP</span></div>
+        <div class="links"><a class="btn" href="https://adobe-pipeline.vercel.app" target="_blank" rel="noopener">adobe-pipeline.vercel.app</a><span class="btn priv">código privado</span></div>
+      </article>
+    </div>
+
+    <div class="tools-divider rv"><p class="eyebrow">Da criação à automação</p><h3>Outras ferramentas da bancada.</h3></div>
+    <div class="grid g2 rv" style="margin-top:28px">
+      <article class="proj">
+        <h3 id="tour-applypilot">ApplyPilot</h3>
+        <div class="meta"><span>jul. 2026</span><span>Python</span><span>litellm · Playwright · Telegram</span><span>33 commits</span><b>público</b></div>
+        <p>Agente que busca vagas de tempos em tempos no Greenhouse, Lever, Ashby, Gupy, LinkedIn e RSS, pontua o encaixe de 0 a 100 com um modelo barato, adapta o JSON Resume e a carta para cada vaga sem inventar nada, renderiza HTML e PDF compatíveis com ATS e aplica sozinho via Playwright. Quando não consegue, ou no modo de revisão, manda a vaga e o CV pelo Telegram com botões de aplicar ou ignorar. Rodou numa VPS ao lado do Hermes Agent.</p>
+        <div class="links"><a class="btn" href="https://github.com/Rhayron/applypilot" target="_blank" rel="noopener">github.com/Rhayron/applypilot</a></div>
+      </article>
+      <svg class="flow" viewBox="0 0 520 250" role="img" aria-label="Fluxo do ApplyPilot: scheduler, discovery, matching, tailoring, render e os três modos de saída">
+        <path class="p" d="M70 40 V 70 M70 100 V 130 M70 160 V 190 M190 205 H 240 M330 205 H 380 M380 205 V 150 H 420 M380 205 H 420 M380 205 V 235 H 420"/>
+        <path class="d" d="M70 40 V 190 H 190 M190 205 H 240 M330 205 H 380 M380 150 H 420 M380 205 H 420 M380 235 H 420 M380 150 V 235"/>
+        <rect x="20" y="20" width="100" height="26" rx="4"/><text x="70" y="37" text-anchor="middle">scheduler</text>
+        <rect x="20" y="70" width="100" height="30" rx="4"/><text x="70" y="83" text-anchor="middle">discovery</text><text class="sub" x="70" y="95" text-anchor="middle">Greenhouse · Lever · Gupy</text>
+        <rect x="20" y="130" width="100" height="30" rx="4"/><text x="70" y="143" text-anchor="middle">matching</text><text class="sub" x="70" y="155" text-anchor="middle">fit 0 a 100, modelo barato</text>
+        <rect x="20" y="190" width="170" height="30" rx="4"/><text x="105" y="203" text-anchor="middle">tailoring</text><text class="sub" x="105" y="215" text-anchor="middle">JSON Resume + carta, sem inventar</text>
+        <rect x="240" y="190" width="90" height="30" rx="4"/><text x="285" y="203" text-anchor="middle">render</text><text class="sub" x="285" y="215" text-anchor="middle">HTML + PDF ATS</text>
+        <rect x="420" y="137" width="90" height="26" rx="4"/><text x="465" y="150" text-anchor="middle">auto</text><text class="sub" x="465" y="160" text-anchor="middle">Playwright</text>
+        <rect x="420" y="192" width="90" height="26" rx="4"/><text x="465" y="205" text-anchor="middle">review</text><text class="sub" x="465" y="215" text-anchor="middle">Telegram ✅ ❌</text>
+        <rect x="420" y="222" width="90" height="26" rx="4"/><text x="465" y="235" text-anchor="middle">alert</text><text class="sub" x="465" y="245" text-anchor="middle">vaga + CV, nunca aplica</text>
+      </svg>
+    </div>
+
+    <div class="rv" style="margin-top:clamp(3rem,7vw,6rem)">
+      <p class="eyebrow" style="margin-bottom:1rem">Bancada · ferramentas menores, 2024 a 2026</p>
+      <div class="tblwrap">
+      <table class="ledger">
+        <thead><tr><th>quando</th><th>o quê</th></tr></thead>
+        <tbody>
+          <tr><td>out. 2026</td><td><b>TaskbarSlim</b><span class="lang">C++</span><p>Altura da barra de tarefas e um Explorer enxuto no Windows 11, como DLLs avulsas, sem Windhawk. No x64, a busca de offsets virou varredura de bytes, sem disassembler.</p></td></tr>
+          <tr><td>set. 2026</td><td><b>jev-decision</b><span class="lang">Python</span><p>Contribuição a uma camada de decisão para agentes de código, por hooks no Hermes Agent e no Claude Code: classifica se o pedido abre outra tarefa, se um comando pode rodar e qual modelo basta para um subagente.</p></td></tr>
+          <tr><td>ago. 2026</td><td><b>vrchat</b><span class="lang">Python</span><p>Gate de hardware e captura multirate de várias câmeras para full-body tracking, com Caliscope, SkellyCam, ONNX Runtime e PyTorch.</p></td></tr>
+          <tr><td>jun. 2026</td><td><b>AetherChat</b><span class="lang">Python · Android</span><p>Chat em grupo com vários modelos de IA na mesma conversa. Backend endurecido depois de uma auditoria adversarial: concorrência, chaves próprias (BYOK), rate limit e teto de custo.</p></td></tr>
+          <tr><td>jun. 2026</td><td><b>Hermes stack</b><span class="lang">Docker · Shell · PowerShell</span><p>Gateway do Hermes Agent, MechaBrain e rclone para o Google Drive numa VPS, com um monitor de finanças e um backup restaurável de tudo.</p></td></tr>
+          <tr><td>2026</td><td><b>audio2text</b><span class="lang">Python</span><p>Transcrição e resumo de reuniões gravadas.</p></td></tr>
+          <tr><td>2024 a 2026</td><td><b>alexa-gemini</b><span class="lang">Python</span><p>Skill da Alexa conversando com o Gemini, a partir de um modelo da comunidade.</p></td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ARQUIVO ===================== -->
+<section class="room arq" id="arquivo" data-guide="arquivo">
+  <div class="wrap">
+    <div class="room-head rv">
+      <h2 class="word">Arquivo</h2>
+      <div class="side">
+        <p class="eyebrow">Sala 6 · 2021 a 2023</p>
+        <p class="thesis">Os cadernos de visão computacional, as páginas de estudo, o firmware das locomotivas e um bot que postava arte todo dia.</p>
+      </div>
+    </div>
+    <div class="grid g32 rv">
+      <div class="tblwrap">
+      <table class="ledger">
+        <thead><tr><th>quando</th><th>o quê</th></tr></thead>
+        <tbody>
+          <tr><td>out. a nov. 2023</td><td><b><a href="https://github.com/Rhayron/CaosDiffusion" target="_blank" rel="noopener">CaosDiffusion</a></b><span class="lang">JavaScript</span><p>Um script sorteia um prompt de uma lista, gera uma arte por IA e posta no Twitter pela API, todo dia no horário escolhido, com contagem regressiva para acompanhar.</p></td></tr>
+          <tr><td>set. a out. 2023</td><td><b><a href="https://github.com/Rhayron/BootStrap5-utils" target="_blank" rel="noopener">BootStrap5-utils</a></b><span class="lang">HTML · JS</span><p>Contador responsivo com Bootstrap 5.</p></td></tr>
+          <tr><td>set. 2023</td><td><b><a href="https://github.com/Rhayron/holy-grail" target="_blank" rel="noopener">holy-grail</a></b><span class="lang">HTML · CSS</span><p>Implementação em blocos do layout Holy Grail responsivo.</p></td></tr>
+          <tr><td>2023</td><td><b>contiki</b><span class="lang">C</span><p>Fork do sistema operacional de código aberto para Internet das Coisas, do tempo dos embarcados.</p></td></tr>
+          <tr><td>mar. 2022 a fev. 2023</td><td><b>ART · Alta Rail Technology</b><span class="lang">C · C++ · Python</span><p>Firmware para computadores de bordo de locomotivas e scripts de automação de testes de hardware, no estágio em hardware e software embarcado.</p></td></tr>
+          <tr id="tour-archive-yolo"><td>dez. 2022 a abr. 2023</td><td><b><a href="https://github.com/Rhayron/YOLOv3_detection_segmentation" target="_blank" rel="noopener">YOLOv3 detection &amp; segmentation</a></b><span class="lang">Jupyter</span><p>Detecção e segmentação com YOLOv3, explicando NMS, mAP, precisão e matriz de confusão.</p></td></tr>
+          <tr><td>ago. 2021</td><td><b>YOLOv3 from Scratch</b><span class="lang">Jupyter</span><p>O detector construído a partir do arquivo de configuração: a arquitetura, a carga dos pesos e os pipelines de entrada e saída.</p></td></tr>
+          <tr><td>mar. 2021</td><td><b>yolo-dataset-generator</b><span class="lang">Jupyter</span><p>Gerar um dataset para treinar o YOLO usando detectores mais lentos.</p></td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="grid" style="gap:1rem;align-content:start">
+        <figure class="frame"><img src="assets/caos-placeholder.jpg" alt="Montanha ao pôr do sol em tons dourados, arte gerada por IA" loading="lazy" width="900" height="599"><figcaption>CaosDiffusion: a arte do dia.</figcaption></figure>
+        <figure class="frame"><img src="assets/yolo-seg.jpg" alt="Diagrama do pipeline de segmentação por bancos de filtros e floresta aleatória" loading="lazy" width="900" height="737"><figcaption>Do caderno de segmentação: bancos de filtros e Random Forest.</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SOBRE ===================== -->
+<section class="room" id="sobre" data-guide="sobre">
+  <div class="wrap">
+    <div class="percurso rv">
+      <p class="eyebrow">Percurso</p>
+      <div class="ruler">
+        <svg viewBox="0 0 900 150" role="img" aria-label="Linha do tempo de 2019 a 2026: graduação, P&amp;D Copel, ART, Caterpillar e mestrado, Container Occupancy, Hina e Coado">
+          <line class="ln" x1="20" y1="70" x2="880" y2="70"/>
+          <g id="ruler-ticks"></g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="sobre rv" style="margin-top:clamp(3rem,6vw,5rem)">
+      <div class="grid" style="gap:1.2rem">
+        <h2 style="font-size:clamp(2rem,4vw,3.2rem);font-weight:300;letter-spacing:-.03em">Gosto de conversar com as áreas, entender o processo real e construir a solução mais simples que resolve.</h2>
+        <p style="max-width:36em">Engenheiro elétrico pela UTFPR (2019 a 2023), mestrando no CPGEI e pós-graduando em desenvolvimento web com frameworks modernos. Mais de cinco anos de Python, três de IA aplicada em ambiente industrial. Trabalho hoje na Caterpillar Brasil como analista de processos de manufatura, e à noite construo a Hina e o que mais aparecer no caderno.</p>
+        <div class="contact">
+          <div class="row"><span>e-mail</span><span id="mail">rhayron.nogueira@gmail.com</span><button type="button" id="copy-mail">copiar</button></div>
+          <div class="row"><span>linkedin</span><a href="https://www.linkedin.com/in/rhayron" target="_blank" rel="noopener">linkedin.com/in/rhayron</a></div>
+          <div class="row"><span>github</span><a href="https://github.com/Rhayron" target="_blank" rel="noopener">github.com/Rhayron</a><a href="https://github.com/Project-H-I-N-A" target="_blank" rel="noopener">Project-H-I-N-A</a></div>
+          <div class="row"><span>idiomas</span><span>português nativo · inglês avançado · francês A1</span></div>
+          <div class="row"><span>onde</span><span>Curitiba, Paraná, Brasil</span></div>
+        </div>
+      </div>
+      <img class="ee" src="assets/profile-ee.png" alt="Ilustração de um engenheiro apontando para um painel elétrico, do perfil no GitHub" loading="lazy" width="900" height="900">
+    </div>
+
+    <div class="contact-invite rv"><p>Vamos dar forma a uma ideia?</p><a class="action" href="mailto:rhayron.nogueira@gmail.com">Conversar por e-mail <span aria-hidden="true">↗</span></a></div>
+    <p class="credits">Hina apresenta este caderno com avatares de amostra © Live2D Inc., como na landing. <a href="credits.html">Animação e créditos</a>. Narração opcional com ElevenLabs v4 Turbo.</p>
+    <footer>
+      <span>Rhayron de Sousa Nogueira · caderno de projetos · outubro de 2026</span>
+      <span>Ciência, código e um pouco de vida. Apresentado pela Hina.</span>
+    </footer>
+  </div>
+</section>
+
+</main>
+<button class="guide-launcher" id="guide-launcher" type="button" aria-controls="hina-guide" aria-expanded="false"><img src="assets/hina-badge-low.png" alt="" width="39" height="39"><span>Um tour com a Hina</span><span class="spark" aria-hidden="true">✳</span></button>
+<aside class="hina-guide" id="hina-guide" aria-labelledby="guide-name" hidden>
+  <div class="guide-avatar" id="guide-avatar" data-avatar-state="loading" aria-busy="true"><span class="avatar-loader" role="status" aria-label="Carregando avatar"><span class="avatar-loader-ring" aria-hidden="true"></span></span></div>
+  <div class="guide-bubble">
+    <div class="guide-progress" aria-hidden="true"><i></i></div>
+    <div class="guide-top"><div class="guide-name" id="guide-name">Hina <small>Sua anfitriã por aqui</small></div><button class="guide-close" id="guide-close" type="button" aria-label="Fechar apresentação">×</button></div>
+    <p class="guide-kicker" id="guide-step">BOAS-VINDAS · 1 / 9</p><h2 class="guide-topic" id="guide-topic">Prazer, Hina.</h2>
+    <button class="guide-transcript" id="guide-transcript" type="button" aria-controls="guide-text" aria-expanded="false">Ver fala</button>
+    <p class="guide-text" id="guide-text" aria-live="polite" aria-atomic="true">Olá, eu sou Hina. Vamos conhecer as ideias e os experimentos do Rhayron.</p>
+    <label class="sr-only" for="guide-select">Escolha uma parada do tour</label>
+    <select class="guide-select" id="guide-select"><option value="intro">Boas-vindas</option><option value="onda">01 · Onda · pesquisa e GPU</option><option value="olho">02 · Olho · visão na indústria</option><option value="splat">02.1 · Splat · reconstrução 3D</option><option value="oficio">03 · Ofício · Coado</option><option value="presenca">04 · Presença · Project Hina</option><option value="genstock">05 · GenStock · criação e automação</option><option value="arquivo">06 · Arquivo · os primeiros passos</option><option value="sobre">Sobre o Rhayron &amp; contato</option></select>
+    <div class="guide-navigation"><button id="guide-prev" type="button" aria-label="Parada anterior">←</button><button class="next" id="guide-next" type="button">Vamos começar ↗</button></div>
+    <div class="guide-follow-controls"><button id="guide-follow" type="button" aria-pressed="true">Foco automático · ligado</button><p id="guide-focus-note">Ao ouvir, Hina conduz a página e avança sozinha.</p></div>
+    <div class="guide-settings"><button id="guide-voice" type="button" aria-pressed="false">◖ Ouvir a Hina</button><button id="guide-motion" type="button" aria-pressed="false">Pausar Hina</button></div>
+    <p class="guide-audio-note" id="guide-audio-note">Voz ElevenLabs v4 · áudio só quando você ativar.</p>
+    <span class="sr-only" id="guide-backend" role="status"></span>
+  </div>
+</aside>
+<noscript><p class="wrap">O tour animado precisa de JavaScript. Todos os projetos e contatos continuam disponíveis nesta página.</p></noscript>
+
+<script defer src="assets/js/notebook.js"></script>
+<script type="importmap">{"imports":{"three":"./assets/vendor/three/three.module.js","three/addons/postprocessing/Pass.js":"./assets/vendor/three/Pass.js","@sparkjsdev/spark":"./assets/vendor/spark/spark.module.js"}}</script>
+<script type="module" src="assets/js/portfolio.js?v=inspection-layout-1"></script>
+<script type="module" src="assets/js/splat-demo.js?v=inspection-layout-1"></script>
+</body>
+</html>

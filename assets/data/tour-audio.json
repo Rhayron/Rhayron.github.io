@@ -1,0 +1,119 @@
+{
+  "persona": "luna",
+  "persona_sha256": "506d8febcaa3c3242d7ed76a29a86408ca63a6e0543d40de4872bf07869d8ccd",
+  "model": "eleven_v4_turbo",
+  "preset": "eleven_v4_turbo_siren",
+  "format": "mp3_44100_128",
+  "source_sha256": "a84aaa8d6aa6580754059db6a02b7d663424f385d0b62c5a8f822fbb5f514d37",
+  "clips": [
+    {
+      "id": "intro",
+      "file": "intro.mp3",
+      "bytes": 251655,
+      "seconds": 15.73,
+      "chunks": 27,
+      "generation_seconds": 5.0,
+      "text_sha256": "01b4b1eb9064a8c59fab6709bc7577e600aed12ac8cb959f468ed301364fa12c",
+      "audio_sha256": "3864d9e5c615be7fa1159daaeecc46cdb7b3b96e7bc78f67b478531915cd833a",
+      "route": "text-to-dialogue-websocket",
+      "fallback": false
+    },
+    {
+      "id": "onda",
+      "file": "onda.mp3",
+      "bytes": 237445,
+      "seconds": 14.84,
+      "chunks": 28,
+      "generation_seconds": 4.2,
+      "text_sha256": "ea081d984a9dfdf322c38572f80d5a367e13f783e4cd7e592751a60133035459",
+      "audio_sha256": "6eb465c816f856ea0efb250ffbac39e43b151123e258807a57130d4795e33693",
+      "route": "text-to-dialogue-websocket",
+      "fallback": false
+    },
+    {
+      "id": "olho",
+      "file": "olho.mp3",
+      "bytes": 247894,
+      "seconds": 15.49,
+      "chunks": 28,
+      "generation_seconds": 4.27,
+      "text_sha256": "7b43d5513147f5902fb59113776700570a0d86129d45e27778decea9f90564a3",
+      "audio_sha256": "c046fcee01f1d3f33c52bb4a51e02c814d6cb596a8d354604bebadb1755db1c8",
+      "route": "text-to-dialogue-websocket",
+      "fallback": false
+    },
+    {
+      "id": "splat",
+      "file": "splat.mp3",
+      "bytes": 468994,
+      "seconds": 29.31,
+      "chunks": 50,
+      "generation_seconds": 7.72,
+      "text_sha256": "1405937a3bd5cc6694e610ae3e6125fa1fd5fb3e7644001bf3374003faa2d305",
+      "audio_sha256": "f0aeb068e9ecc03c951f9c1db10cb4d031b10b177dc59052629367da0020499d",
+      "route": "text-to-dialogue-websocket",
+      "fallback": false
+    },
+    {
+      "id": "oficio",
+      "file": "oficio.mp3",
+      "bytes": 292615,
+      "seconds": 18.29,
+      "chunks": 32,
+      "generation_seconds": 5.42,
+      "text_sha256": "9b00360ca7f77a77a61b2f447b033670db6f5c393866a81b0fca5d4479d5607e",
+      "audio_sha256": "bbff6e6e060ce8505347db74489901753bb65a0822fcbf04ab80819b4b676691",
+      "route": "text-to-dialogue-websocket",
+      "fallback": false
+    },
+    {
+      "id": "presenca",
+      "file": "presenca.mp3",
+      "bytes": 249148,
+      "seconds": 15.57,
+      "chunks": 30,
+      "generation_seconds": 4.15,
+      "text_sha256": "48a35920fda541a3fd0645557db8a8a21b4cec13768c47b520860c259d9b978e",
+      "audio_sha256": "5597aedfd2b28be029c02f565a84c4787d8bc2eee6efb9312daa4504b8dfd01f",
+      "route": "text-to-dialogue-websocket",
+      "fallback": false
+    },
+    {
+      "id": "genstock",
+      "file": "genstock.mp3",
+      "bytes": 380804,
+      "seconds": 23.8,
+      "chunks": 39,
+      "generation_seconds": 6.24,
+      "text_sha256": "27753619c1705c9fb289cd26ac82d5d4736fec6bc9f330757ff6542462f62056",
+      "audio_sha256": "781f1217c59c4fd7432e471a46bbfcb1361b778ef2a1e53849b7ad7cc400c398",
+      "route": "text-to-dialogue-websocket",
+      "fallback": false
+    },
+    {
+      "id": "arquivo",
+      "file": "arquivo.mp3",
+      "bytes": 219473,
+      "seconds": 13.71,
+      "chunks": 26,
+      "generation_seconds": 4.0,
+      "text_sha256": "edb4508be968e8b1bc376d1f115cd30397ea44375c0c9aa9229856e139c5efbb",
+      "audio_sha256": "b4858b6fb9660d625151db41779da69d5c3defb8f4eec4a7fdc7925e7a9ff869",
+      "route": "text-to-dialogue-websocket",
+      "fallback": false
+    },
+    {
+      "id": "sobre",
+      "file": "sobre.mp3",
+      "bytes": 256671,
+      "seconds": 16.04,
+      "chunks": 29,
+      "generation_seconds": 4.52,
+      "text_sha256": "3d167afed0f9383649a88b3c1d47509ea19f56a14e4ac2e6bf3c3a6c9ccb73ee",
+      "audio_sha256": "b731be3c2f89c7928caf39c4456245b8f55b31ba51dfb74069d17cb6ddd2b19d",
+      "route": "text-to-dialogue-websocket",
+      "fallback": false
+    }
+  ],
+  "presenter": "Hina"
+}

@@ -1,0 +1,58 @@
+/* Hina dashboard's organic loader, using the portfolio's moss and sage palette. */
+.avatar-loader {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+.avatar-loader-ring {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  border: 2px solid color-mix(in srgb, var(--accent) 16%, transparent);
+  border-top-color: color-mix(in srgb, var(--accent) 85%, transparent);
+  border-right-color: color-mix(in srgb, var(--accent) 65%, var(--accent-soft));
+  border-radius: 46% 54% 58% 42% / 52% 44% 56% 48%;
+  box-shadow: 0 0 24px color-mix(in srgb, var(--accent) 18%, transparent), inset 0 0 18px color-mix(in srgb, var(--moss) 12%, transparent);
+  animation: avatar-loader-orbit 1.15s cubic-bezier(.55, .08, .45, .92) infinite,
+    avatar-loader-morph 2.3s ease-in-out infinite alternate;
+}
+.avatar-loader-ring::before {
+  content: "";
+  position: absolute;
+  inset: 13px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 38% 34%, var(--card) 0 7%, color-mix(in srgb, var(--moss) 50%, transparent) 28%, color-mix(in srgb, var(--accent) 8%, transparent) 70%);
+  box-shadow: 0 0 20px color-mix(in srgb, var(--moss) 30%, transparent);
+  animation: avatar-loader-bloom 1.5s ease-in-out infinite;
+}
+.avatar-loader-ring::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  right: 2px;
+  top: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--moss) 90%, transparent);
+}
+[data-avatar-state="loading"] > canvas { opacity: 0; }
+[data-avatar-state="ready"] > canvas { opacity: 1; transition: opacity .25s ease; }
+@keyframes avatar-loader-orbit { to { transform: rotate(360deg); } }
+@keyframes avatar-loader-morph {
+  to {
+    border-radius: 58% 42% 46% 54% / 43% 57% 45% 55%;
+    box-shadow: 0 0 34px color-mix(in srgb, var(--accent) 24%, transparent), inset 0 0 22px color-mix(in srgb, var(--moss) 18%, transparent);
+  }
+}
+@keyframes avatar-loader-bloom {
+  0%, 100% { opacity: .58; transform: scale(.82); }
+  50% { opacity: 1; transform: scale(1.12); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .avatar-loader-ring, .avatar-loader-ring::before { animation: none; }
+  [data-avatar-state="ready"] > canvas { transition: none; }
+}

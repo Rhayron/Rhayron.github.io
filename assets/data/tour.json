@@ -1,0 +1,65 @@
+[
+  {
+    "id": "intro",
+    "target": "topo",
+    "label": "Boas-vindas",
+    "title": "Prazer, Hina.",
+    "text": "Olá, eu sou Hina, a sua anfitriã neste passeio. O Rhayron é engenheiro eletricista e transforma pesquisa, visão computacional e inteligência artificial em projetos concretos. Vamos conhecer as ideias e os experimentos que compõem este caderno."
+  },
+  {
+    "id": "onda",
+    "target": "onda",
+    "label": "01 · Pesquisa",
+    "title": "Enxergar com som.",
+    "text": "O mestrado do Rhayron, na UTFPR, investiga como enxergar o interior das peças com ultrassom. Os cálculos vão para a GPU, enquanto uma câmera acompanha a posição da sonda. É um encontro entre física, visão computacional e código."
+  },
+  {
+    "id": "olho",
+    "target": "olho",
+    "label": "02 · Indústria",
+    "title": "Um olhar para o real.",
+    "text": "Na Caterpillar, o Rhayron aplica visão computacional e automação aos processos industriais. As câmeras ajudam a identificar erros de montagem e a transformar imagens em informação útil. Arraste o comparador do contêiner para observar o que o modelo identifica."
+  },
+  {
+    "id": "splat",
+    "target": "splat-project",
+    "label": "02.1 · Reconstrução 3D",
+    "title": "Das imagens para o espaço.",
+    "text": "Agora, das imagens para um espaço em três dimensões. No Splat SaaS, fotos ou um vídeo entram no pipeline. Primeiro, os quadros são preparados. Depois, o sistema estima as posições das câmeras e aprende a aparência da cena com gaussianas. O trabalho pesado acontece na GPU; o resultado pode ser explorado no navegador. Gire a borboleta para perceber a mudança de ponto de vista e use os botões para aproximar os detalhes. Esta cena é uma referência pública da técnica."
+  },
+  {
+    "id": "oficio",
+    "target": "oficio",
+    "label": "03 · Coado",
+    "title": "Ideias que criam raiz.",
+    "text": "O Coado organiza os estudos sem perder de vista a rotina. Ele reúne plano por concurso, ciclo de matérias, pomodoro e revisões espaçadas. O mesmo acompanhamento aparece no computador, no celular e no relógio. A ideia é simples: transformar um plano grande em uma próxima sessão possível."
+  },
+  {
+    "id": "presenca",
+    "target": "presenca",
+    "label": "04 · Project Hina",
+    "title": "Presença com personalidade.",
+    "text": "O Project Hina dá forma a companheiras virtuais com voz, memória e personalidade, como eu. Os avatares mostram algumas das possibilidades dessa presença na tela. Escolha um deles para continuar o passeio e conheça, logo abaixo, o dashboard do aplicativo."
+  },
+  {
+    "id": "genstock",
+    "target": "genstock",
+    "label": "05 · Criação e automação",
+    "title": "Do repertório à criação.",
+    "text": "No GenStock Studio, referências visuais viram ponto de partida para criar, organizar e preparar imagens. O pipeline reúne pesquisa, geração e exportação em um mesmo fluxo. Logo depois, o ApplyPilot mostra outra forma de automatizar trabalho: encontrar vagas e preparar candidaturas. A bancada reúne ferramentas menores que nasceram de necessidades concretas."
+  },
+  {
+    "id": "arquivo",
+    "target": "arquivo",
+    "label": "06 · Arquivo",
+    "title": "Antes de tudo florescer.",
+    "text": "Todo projeto tem uma história. Estes cadernos reúnem estudos de visão computacional, experimentos com YOLO, firmware de locomotivas e os primeiros trabalhos na web. São algumas das raízes do que você acabou de conhecer."
+  },
+  {
+    "id": "sobre",
+    "target": "sobre",
+    "label": "Sobre & contato",
+    "title": "Agora é com vocês.",
+    "text": "O Rhayron procura entender o processo e construir soluções simples, úteis e sustentáveis. Para conversar sobre pesquisa, visão computacional ou inteligência artificial, os contatos estão aqui. Foi um prazer apresentar este caderno; as próximas ideias já estão a caminho."
+  }
+]

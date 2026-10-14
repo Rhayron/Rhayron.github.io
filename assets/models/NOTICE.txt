@@ -1,0 +1,13 @@
+Live2D sample models: Hiyori Momose, Haru, Mao Niziiro and Wankoromochi.
+Copyright Live2D Inc. All rights reserved.
+
+This content uses sample data owned and copyrighted by Live2D Inc. The sample data are utilized in accordance with terms and conditions set by Live2D Inc. This content itself is created at the author's sole discretion.
+
+These are licensed sample models, not models relicensed under the website or Hina source-code license.
+Terms: https://www.live2d.com/en/learn/sample/model-terms/
+License: https://www.live2d.com/eula/live2d-free-material-license-agreement_en.html
+Origin: Project Hina checkout, web/live2d-models; upstream Live2D Cubism sample data.
+Changes: sample sound references removed from Haru manifest; artwork, textures and model binaries unchanged. Only referenced runtime assets included.
+
+PixiJS 7.4.3 and pixi-live2d-display 0.4.0 retain their MIT licenses in assets/vendor.
+Cubism Core is loaded from the official Live2D CDN, as in Hina; it is not bundled here.
