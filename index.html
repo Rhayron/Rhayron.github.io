@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap">
 
 <link rel="stylesheet" href="assets/css/notebook.css">
-<link rel="stylesheet" href="assets/css/portfolio.css?v=inspection-layout-1">
+<link rel="stylesheet" href="assets/css/portfolio.css?v=inspection-layout-2">
 <link rel="stylesheet" href="assets/css/avatar-loading.css?v=2">
 </head>
 <body>
@@ -518,8 +518,8 @@
     <label class="sr-only" for="guide-select">Escolha uma parada do tour</label>
     <select class="guide-select" id="guide-select"><option value="intro">Boas-vindas</option><option value="onda">01 · Onda · pesquisa e GPU</option><option value="olho">02 · Olho · visão na indústria</option><option value="splat">02.1 · Splat · reconstrução 3D</option><option value="oficio">03 · Ofício · Coado</option><option value="presenca">04 · Presença · Project Hina</option><option value="genstock">05 · GenStock · criação e automação</option><option value="arquivo">06 · Arquivo · os primeiros passos</option><option value="sobre">Sobre o Rhayron &amp; contato</option></select>
     <div class="guide-navigation"><button id="guide-prev" type="button" aria-label="Parada anterior">←</button><button class="next" id="guide-next" type="button">Vamos começar ↗</button></div>
-    <div class="guide-follow-controls"><button id="guide-follow" type="button" aria-pressed="true">Foco automático · ligado</button><p id="guide-focus-note">Ao ouvir, Hina conduz a página e avança sozinha.</p></div>
-    <div class="guide-settings"><button id="guide-voice" type="button" aria-pressed="false">◖ Ouvir a Hina</button><button id="guide-motion" type="button" aria-pressed="false">Pausar Hina</button></div>
+    <div class="guide-follow-controls"><div class="guide-pills"><button id="guide-follow" type="button" aria-pressed="true">Foco automático · ligado</button><button id="guide-voice" type="button" aria-pressed="false">◖ Ouvir a Hina</button></div><p id="guide-focus-note">Ao ouvir, Hina conduz a página e avança sozinha.</p></div>
+    <div class="guide-settings"><button id="guide-motion" type="button" aria-pressed="false">Pausar Hina</button></div>
     <p class="guide-audio-note" id="guide-audio-note">Voz ElevenLabs v4 · áudio só quando você ativar.</p>
     <span class="sr-only" id="guide-backend" role="status"></span>
   </div>

@@ -196,6 +196,9 @@ footer{flex-wrap:wrap;font-size:.65rem;padding-bottom:70px}
 .guide-follow-controls button,.guide-transcript{font:.66rem var(--sans);color:var(--accent-ink);border:1px solid var(--line);border-radius:20px;background:var(--accent-soft);padding:7px 10px;min-height:32px}
 .guide-follow-controls button[aria-pressed="false"]{background:transparent}
 #guide-focus-note{font:.61rem/1.45 var(--sans);color:var(--mute);margin:7px 0 0}
+.guide-pills{display:flex;flex-wrap:wrap;gap:8px}
+.guide-follow-controls #guide-voice{background:var(--accent-soft)}
+.guide-follow-controls #guide-voice[aria-pressed="true"]{border-color:var(--accent)}
 .guide-progress{height:3px;position:absolute;left:20px;right:20px;top:0;overflow:hidden;border-radius:3px;pointer-events:none}
 .guide-progress i{display:block;background:var(--accent);height:100%;transform:scaleX(var(--tour-progress,0));transform-origin:left}
 .guide-transcript{display:none}
@@ -213,9 +216,10 @@ footer{flex-wrap:wrap;font-size:.65rem;padding-bottom:70px}
   .hina-guide[data-guided="true"][data-transcript="open"] .guide-text{display:block}
   .hina-guide[data-guided="true"] .guide-transcript{display:block;position:absolute;right:54px;top:12px;padding:4px 8px;min-height:28px;background:transparent;font-size:.59rem}
   .hina-guide[data-guided="true"] .guide-name small{display:none}
-  .hina-guide[data-guided="true"] .guide-follow-controls{display:flex;align-items:center;gap:10px;margin-top:7px;padding-top:7px}
+  .hina-guide[data-guided="true"] .guide-follow-controls{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-top:7px;padding-top:7px}
+  .hina-guide[data-guided="true"] .guide-pills{gap:6px}
   .hina-guide[data-guided="true"] .guide-follow-controls button{flex:none;font-size:.56rem;padding:5px 7px}
-  .hina-guide[data-guided="true"] #guide-focus-note{margin:0;font-size:.57rem}
+  .hina-guide[data-guided="true"] #guide-focus-note{flex:1 1 100%;margin:0;font-size:.57rem}
   .hina-guide[data-guided="true"] .guide-settings{margin-top:6px;padding-top:3px}
   .tour-focus{outline-offset:5px;box-shadow:0 0 0 7px color-mix(in srgb,var(--accent-soft) 55%,transparent)}
 }
