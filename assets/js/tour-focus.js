@@ -29,17 +29,20 @@ export class TourFocus {
     });
     // Only direct user input relinquishes control, never our own scroll events.
     const release = event => {
+      if (event.target?.closest?.('#cmp, #avatar-montage, [data-avatar-choice]')) return;
       if ((this.active || (this.enabled && panel.dataset.voiceEnabled === 'true')) && !panel.contains(event.target)) this.interrupt();
     };
     window.addEventListener('wheel', release, {passive:true});
     window.addEventListener('touchmove', release, {passive:true});
     document.addEventListener('pointerdown', event => {
-      if (event.target.closest('#cmp, main a, main button, .rail a, #splat-view') || event.clientX >= document.documentElement.clientWidth) release(event);
+      if (event.target.closest('#cmp, #avatar-montage, [data-avatar-choice]')) return;
+      if (event.target.closest('main a, main button, .rail a, #splat-view') || event.clientX >= document.documentElement.clientWidth) release(event);
     }, {passive:true});
     document.addEventListener('keydown', event => {
       if (['ArrowDown','ArrowUp','PageDown','PageUp','Home','End',' '].includes(event.key)) release(event);
     });
-    this.range.addEventListener('input', event => { if (event.isTrusted) release(event); });
+    // The comparator is part of this chapter: explore it without giving up the guided tour.
+    this.range.addEventListener('input', () => {});
     this.render();
   }
 
@@ -103,7 +106,23 @@ export class TourFocus {
     const bottom = mobile ? this.panel.getBoundingClientRect().top - 16 : window.innerHeight - 30;
     const available = Math.max(100, bottom - top);
     const inset = rect.height < available ? (available - rect.height) / 2 : 0;
-    window.scrollTo({top: Math.max(0, window.scrollY + rect.top - top - inset), behavior:this.reduced.matches ? 'instant' : 'smooth'});
+    this.smoothScrollTo(Math.max(0, window.scrollY + rect.top - top - inset));
+  }
+
+  smoothScrollTo(top) {
+    if (this.reduced.matches) { window.scrollTo({top, behavior:'instant'}); return; }
+    cancelAnimationFrame(this.scrollFrame);
+    const start = window.scrollY;
+    const distance = top - start;
+    const duration = Math.min(1050, Math.max(460, Math.abs(distance) * .45));
+    const beganAt = performance.now();
+    const tick = now => {
+      const progress = Math.min(1, (now - beganAt) / duration);
+      const eased = 1 - Math.pow(1 - progress, 4);
+      window.scrollTo({top:start + distance * eased, behavior:'instant'});
+      if (progress < 1 && this.active && this.enabled) this.scrollFrame = requestAnimationFrame(tick);
+    };
+    this.scrollFrame = requestAnimationFrame(tick);
   }
 
   unhighlight(restore = true) {
@@ -132,6 +151,7 @@ export class TourFocus {
   interrupt() {
     this.enabled = false;
     // Cancel an in-flight smooth scroll when the reader takes over.
+    cancelAnimationFrame(this.scrollFrame);
     window.scrollTo({top:window.scrollY, behavior:'instant'});
     this.clear({restore:false, preserveChapter:true});
   }
