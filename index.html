@@ -339,11 +339,23 @@
     <div class="rv" style="margin-top:clamp(3rem,7vw,6rem)">
       <p class="eyebrow" style="margin-bottom:1.2rem">A família em volta</p>
       <div class="eco">
-        <div class="it">
-          <img class="round" src="assets/hinawatch-face.png" alt="Mostrador do relógio com a Hina em miniatura e a hora" loading="lazy" width="360" height="360">
+        <div class="it hinawatch-story">
+          <style>
+            .hinawatch-stack{position:relative;min-height:330px;margin:0 0 22px;isolation:isolate}
+            .hinawatch-stack .watch-card{position:absolute;width:190px;aspect-ratio:1;object-fit:cover;border:2px solid var(--card);border-radius:50%;box-shadow:0 14px 32px #1e17201e}
+            .hinawatch-stack .watch-main{width:258px;left:0;top:0;z-index:3;border-color:var(--accent)}
+            .hinawatch-stack .watch-portrait{right:0;top:56px;z-index:2}
+            .hinawatch-stack .watch-face{left:98px;bottom:0;z-index:4}
+            @media(max-width:580px){.hinawatch-stack{min-height:292px}.hinawatch-stack .watch-main{width:220px}.hinawatch-stack .watch-card{width:155px}.hinawatch-stack .watch-face{left:73px}.hinawatch-stack .watch-portrait{top:62px}}
+          </style>
+          <div class="hinawatch-stack" aria-label="Três telas do HinaWatch: início, retrato da Hina e mostrador">
+            <img class="watch-card watch-main" src="assets/hinawatch-image.png" alt="Tela principal do aplicativo HinaWatch no relógio" loading="lazy" width="384" height="384">
+            <img class="watch-card watch-portrait" src="assets/hinawatch-portrait.png" alt="Tela do HinaWatch com o avatar em retrato" loading="lazy" width="440" height="441">
+            <img class="watch-card watch-face" src="assets/hinawatch-face.png" alt="Mostrador do relógio com a Hina e a hora" loading="lazy" width="360" height="360">
+          </div>
           <h4>HinaWatch</h4>
           <p class="mono" style="color:var(--accent)">set. a out. 2026 · Kotlin · Wear OS · 58 commits</p>
-          <p>O mesmo modelo Live2D ativo no PC, desenhado na GPU do relógio com o Cubism SDK for Java em OpenGL ES 2. Só chegam eventos pelo WebSocket, nunca vídeo. Push-to-talk, HUD do modo pet e pedidos de permissão do agente respondidos no pulso. No TicWatch Pro 3 Ultra, o build sem depuração baixou o quadro do avatar de 17,5 para 9,4 ms.</p>
+          <p>O app do pulso reúne a tela inicial, o retrato Live2D e o mostrador em pequenas interfaces circulares. O mesmo modelo ativo no PC é desenhado na GPU do relógio com o Cubism SDK for Java em OpenGL ES 2. Só chegam eventos pelo WebSocket, nunca vídeo. Push-to-talk, HUD do modo pet e pedidos de permissão do agente respondidos no pulso. No TicWatch Pro 3 Ultra, o build sem depuração baixou o quadro do avatar de 17,5 para 9,4 ms.</p>
         </div>
         <div class="it">
           <h4>HinaMobile</h4>
