@@ -39,6 +39,36 @@ let navigationTarget = null;
 let navigationTimeout;
 let scrollFrame;
 
+// While narration plays, keep the guide in a compact bar and preserve the full avatar above it.
+const speakingGuideStyles = document.createElement('style');
+speakingGuideStyles.textContent = `
+.hina-guide[data-guided="true"][data-speaking="true"] .guide-avatar{
+  width:250px;height:min(37vh,335px);margin:0 15px -20px auto;
+}
+.hina-guide[data-guided="true"][data-speaking="true"] .guide-bubble{
+  min-height:64px;max-height:none;overflow:visible;padding:11px 14px;
+  border-radius:18px 18px 6px 18px;
+}
+.hina-guide[data-guided="true"][data-speaking="true"] .guide-top{margin:0}
+.hina-guide[data-guided="true"][data-speaking="true"] .guide-kicker,
+.hina-guide[data-guided="true"][data-speaking="true"] .guide-topic,
+.hina-guide[data-guided="true"][data-speaking="true"] .guide-text,
+.hina-guide[data-guided="true"][data-speaking="true"] .guide-transcript,
+.hina-guide[data-guided="true"][data-speaking="true"] .guide-select,
+.hina-guide[data-guided="true"][data-speaking="true"] .guide-navigation,
+.hina-guide[data-guided="true"][data-speaking="true"] .guide-follow-controls,
+.hina-guide[data-guided="true"][data-speaking="true"] .guide-settings,
+.hina-guide[data-guided="true"][data-speaking="true"] .guide-audio-note{display:none}
+.hina-guide[data-guided="true"][data-speaking="true"] .guide-progress{left:14px;right:14px}
+@media (max-width:700px){
+  .hina-guide[data-guided="true"][data-speaking="true"] .guide-avatar{
+    width:250px;height:min(37vh,335px);margin:0 8px -20px auto;
+  }
+}
+`;
+document.head.append(speakingGuideStyles);
+
+
 // The same stage and motion engine as the Hina landing, with deferred GPU work.
 const heroStage = new HinaStage($('hero-avatar'), $('hero-backend'));
 heroStage.load('haru');
@@ -197,15 +227,23 @@ function closeGuide() {
   (returnFocus?.isConnected ? returnFocus : launcher).focus({ preventScroll:true });
 }
 launcher.addEventListener('click', () => openGuide());
-document.querySelectorAll('[data-open-guide]').forEach(button => button.addEventListener('click', () => openGuide(true)));
+document.querySelectorAll('[data-open-guide]').forEach(button => button.addEventListener('click', async () => {
+  openGuide(true);
+  await startGuideVoice();
+}));
 $('guide-close').addEventListener('click', closeGuide);
 $('guide-prev').addEventListener('click', () => jump(Math.max(0, index - 1)));
 $('guide-next').addEventListener('click', () => jump((index + 1) % chapters.length));
 $('guide-select').addEventListener('change', e => jump(chapters.findIndex(c => c.id === e.target.value)));
 $('guide-voice').addEventListener('click', async () => {
-  voice = !voice;
+  if (voice) { voice = false; voiceLabel(); stopSpeech(); return; }
+  await startGuideVoice();
+});
+
+async function startGuideVoice() {
+  if (voice) return;
+  voice = true;
   voiceLabel();
-  if (!voice) { stopSpeech(); return; }
   try {
     audioContext ||= new AudioContext();
     await audioContext.resume();
@@ -215,7 +253,8 @@ $('guide-voice').addEventListener('click', async () => {
     voiceLabel();
     $('guide-audio-note').textContent = 'Áudio indisponível neste navegador.';
   }
-});
+}
+
 function motionLabel() {
   const paused = ambientPaused();
   $('guide-motion').setAttribute('aria-pressed', String(paused));
@@ -282,8 +321,9 @@ document.querySelectorAll('[data-avatar-choice]').forEach(button => {
     document.querySelectorAll('[data-avatar-choice]').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
     montageStages.get(id)?.react();
     if (guideStage && guideStage.status.dataset.model !== id) guideStage.load(id);
+    const keepNarration = isOpen && voice && focusTour.enabled;
     if (!isOpen) openGuide();
-    setChapter(chapters.findIndex(chapter => chapter.id === 'presenca'));
+    if (!keepNarration) setChapter(chapters.findIndex(chapter => chapter.id === 'presenca'));
   });
 });
 
